@@ -9,8 +9,11 @@ namespace JCT_SFML
 
 		class Edge
 		{
+		private:
+			class EdgePrivate* d;
 		public:
 			Edge(const Node* sourceNode, const Node* targetNode);
+			~Edge();
 		};
 	}
 }
