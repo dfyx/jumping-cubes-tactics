@@ -23,7 +23,11 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "jct_sfml")
-add_executable(${EXECUTABLE_NAME} "${PROJECT_SOURCE_DIR}/main.cpp")
+add_executable(${EXECUTABLE_NAME}
+	"${PROJECT_SOURCE_DIR}/main.cpp"
+	"${PROJECT_SOURCE_DIR}/gamedata/node.cpp"
+	"${PROJECT_SOURCE_DIR}/gamedata/edge.cpp"
+)
 
 
 # Detect and add SFML
