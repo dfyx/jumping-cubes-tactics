@@ -43,6 +43,11 @@ namespace JCT_SFML
 			return result;
 		}
 
+		unsigned int Node::edgeCount() const
+		{
+			return d->edges.size();
+		}
+
 		unsigned int Node::value() const
 		{
 			return d->value;

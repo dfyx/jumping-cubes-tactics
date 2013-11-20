@@ -23,6 +23,7 @@ namespace JCT_SFML
 
 			const std::list<const Edge*> &edges() const;
 			std::list<const Node*> neighbors() const;
+			unsigned int edgeCount() const;
 
 			unsigned int value() const;
 			void setValue(unsigned int value);
