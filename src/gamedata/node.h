@@ -15,7 +15,7 @@ namespace JCT_SFML
 			class NodePrivate *d;
 
 		public:
-			Node();
+			Node(unsigned int value = 1);
 			~Node();
 
 			void addEdge(const Node *targetNode);
@@ -23,6 +23,9 @@ namespace JCT_SFML
 
 			const std::list<const Edge*> &edges() const;
 			std::list<const Node*> neighbors() const;
+
+			unsigned int value() const;
+			void setValue(unsigned int value);
 		};
 	}
 }

@@ -12,6 +12,7 @@ namespace JCT_SFML
 		{
 		public:
 			std::list<const Edge*> edges;
+			unsigned int value;
 		};
 	}
 }

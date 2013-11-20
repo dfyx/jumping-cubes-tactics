@@ -6,9 +6,10 @@ namespace JCT_SFML
 {
 	namespace Gamedata
 	{
-		Node::Node()
+		Node::Node(unsigned int value)
 		{
 			d = new NodePrivate();
+			d->value = value;
 		}
 
 		Node::~Node()
@@ -40,6 +41,16 @@ namespace JCT_SFML
 				result.push_back((*iter)->targetNode());
 			}
 			return result;
+		}
+
+		unsigned int Node::value() const
+		{
+			return d->value;
+		}
+
+		void Node::setValue(unsigned int value)
+		{
+			d->value = value;
 		}
 	}
 }
