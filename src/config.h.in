@@ -1,0 +1,2 @@
+#define jct_sfml_VERSION_MAJOR @jct_sfml_VERSION_MAJOR@
+#define jct_sfml_VERSION_MINOR @jct_sfml_VERSION_MINOR@
