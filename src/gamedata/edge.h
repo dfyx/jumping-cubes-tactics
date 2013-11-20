@@ -14,6 +14,9 @@ namespace JCT_SFML
 		public:
 			Edge(const Node* sourceNode, const Node* targetNode);
 			~Edge();
+
+			const Node* sourceNode() const;
+			const Node* targetNode() const;
 		};
 	}
 }

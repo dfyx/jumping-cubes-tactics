@@ -17,5 +17,15 @@ namespace JCT_SFML
 		{
 			delete d;
 		}
+
+		const Node* Edge::sourceNode() const
+		{
+			return d->sourceNode;
+		}
+
+		const Node* Edge::targetNode() const
+		{
+			return d->targetNode;
+		}
 	}
 }
