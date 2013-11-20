@@ -22,6 +22,7 @@ namespace JCT_SFML
 			void addEdge(const Edge *edge);
 
 			const std::list<const Edge*> &edges() const;
+			std::list<const Node*> neighbors() const;
 		};
 	}
 }

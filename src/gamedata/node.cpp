@@ -30,5 +30,16 @@ namespace JCT_SFML
 		{
 			return d->edges;
 		}
+
+		std::list<const Node*> Node::neighbors() const
+		{
+			std::list<const Edge*>::iterator iter;
+			std::list<const Node*> result;
+			for(iter = d->edges.begin(); iter != d->edges.end(); iter++)
+			{
+				result.push_back((*iter)->targetNode());
+			}
+			return result;
+		}
 	}
 }
