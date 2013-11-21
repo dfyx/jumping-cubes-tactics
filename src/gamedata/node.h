@@ -8,6 +8,7 @@ namespace JCT_SFML
 	namespace Gamedata
 	{
 		class Edge;
+		class Player;
 
 		class Node
 		{
@@ -27,6 +28,9 @@ namespace JCT_SFML
 
 			unsigned int value() const;
 			void setValue(unsigned int value);
+
+			const Player *owner() const;
+			void setOwner(const Player *owner);
 		};
 	}
 }

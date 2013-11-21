@@ -8,11 +8,14 @@ namespace JCT_SFML
 	namespace Gamedata
 	{
 		class Edge;
+		class Player;
+
 		class NodePrivate
 		{
 		public:
 			std::list<const Edge*> edges;
 			unsigned int value;
+			const Player *owner;
 		};
 	}
 }

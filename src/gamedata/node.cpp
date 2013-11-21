@@ -10,6 +10,7 @@ namespace JCT_SFML
 		{
 			d = new NodePrivate();
 			d->value = value;
+			d->owner = NULL;
 		}
 
 		Node::~Node()
@@ -56,6 +57,16 @@ namespace JCT_SFML
 		void Node::setValue(unsigned int value)
 		{
 			d->value = value;
+		}
+
+		const Player *Node::owner() const
+		{
+			return d->owner;
+		}
+
+		void Node::setOwner(const Player *owner)
+		{
+			d->owner = owner;
 		}
 	}
 }
