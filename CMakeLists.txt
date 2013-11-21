@@ -27,6 +27,7 @@ add_executable(${EXECUTABLE_NAME}
 	"${PROJECT_SOURCE_DIR}/main.cpp"
 	"${PROJECT_SOURCE_DIR}/gamedata/node.cpp"
 	"${PROJECT_SOURCE_DIR}/gamedata/edge.cpp"
+	"${PROJECT_SOURCE_DIR}/gamedata/player.cpp"
 )
 
 
