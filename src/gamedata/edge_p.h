@@ -10,8 +10,8 @@ namespace JCT_SFML
 		class EdgePrivate
 		{
 		public:
-			const Node* sourceNode;
-			const Node* targetNode;
+			Node* sourceNode;
+			Node* targetNode;
 		};
 	}
 }

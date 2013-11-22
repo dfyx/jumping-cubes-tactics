@@ -13,9 +13,9 @@ namespace JCT_SFML
 		class NodePrivate
 		{
 		public:
-			std::list<const Edge*> edges;
+			std::list<Edge*> edges;
 			unsigned int value;
-			const Player *owner;
+			Player *owner;
 		};
 	}
 }

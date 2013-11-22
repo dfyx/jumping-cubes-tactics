@@ -19,18 +19,18 @@ namespace JCT_SFML
 			Node(unsigned int value = 1);
 			~Node();
 
-			void addEdge(const Node *targetNode);
-			void addEdge(const Edge *edge);
+			void addEdge(Node *targetNode);
+			void addEdge(Edge *edge);
 
-			const std::list<const Edge*> &edges() const;
-			std::list<const Node*> neighbors() const;
+			const std::list<Edge*> &edges() const;
+			std::list<Node*> neighbors() const;
 			unsigned int edgeCount() const;
 
 			unsigned int value() const;
 			void setValue(unsigned int value);
 
-			const Player *owner() const;
-			void setOwner(const Player *owner);
+			Player *owner() const;
+			void setOwner(Player *owner);
 		};
 	}
 }

@@ -18,25 +18,25 @@ namespace JCT_SFML
 			delete d;
 		}
 
-		void Node::addEdge(const Node* targetNode)
+		void Node::addEdge(Node* targetNode)
 		{
 			addEdge(new Edge(this, targetNode));
 		}
 
-		void Node::addEdge(const Edge* edge)
+		void Node::addEdge(Edge* edge)
 		{
 			d->edges.push_back(edge);
 		}
 
-		const std::list<const Edge*> &Node::edges() const
+		const std::list<Edge*> &Node::edges() const
 		{
 			return d->edges;
 		}
 
-		std::list<const Node*> Node::neighbors() const
+		std::list<Node*> Node::neighbors() const
 		{
-			std::list<const Edge*>::iterator iter;
-			std::list<const Node*> result;
+			std::list<Edge*>::iterator iter;
+			std::list<Node*> result;
 			for(iter = d->edges.begin(); iter != d->edges.end(); iter++)
 			{
 				result.push_back((*iter)->targetNode());
@@ -59,12 +59,12 @@ namespace JCT_SFML
 			d->value = value;
 		}
 
-		const Player *Node::owner() const
+		Player *Node::owner() const
 		{
 			return d->owner;
 		}
 
-		void Node::setOwner(const Player *owner)
+		void Node::setOwner(Player *owner)
 		{
 			d->owner = owner;
 		}

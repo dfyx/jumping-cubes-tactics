@@ -12,11 +12,11 @@ namespace JCT_SFML
 		private:
 			class EdgePrivate* d;
 		public:
-			Edge(const Node* sourceNode, const Node* targetNode);
+			Edge(Node* sourceNode, Node* targetNode);
 			~Edge();
 
-			const Node* sourceNode() const;
-			const Node* targetNode() const;
+			Node* sourceNode() const;
+			Node* targetNode() const;
 		};
 	}
 }

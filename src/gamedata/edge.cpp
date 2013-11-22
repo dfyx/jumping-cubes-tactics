@@ -6,7 +6,7 @@ namespace JCT_SFML
 {
 	namespace Gamedata
 	{
-		Edge::Edge(const Node* sourceNode, const Node* targetNode)
+		Edge::Edge(Node* sourceNode, Node* targetNode)
 		{
 			d = new EdgePrivate();
 			d->sourceNode = sourceNode;
@@ -18,12 +18,12 @@ namespace JCT_SFML
 			delete d;
 		}
 
-		const Node* Edge::sourceNode() const
+		Node* Edge::sourceNode() const
 		{
 			return d->sourceNode;
 		}
 
-		const Node* Edge::targetNode() const
+		Node* Edge::targetNode() const
 		{
 			return d->targetNode;
 		}
