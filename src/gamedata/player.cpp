@@ -9,6 +9,7 @@ namespace JCT_SFML
 		{
 			d = new PlayerPrivate();
 			d->name = name;
+			d->score = 0;
 		}
 
 		Player::~Player()
@@ -19,6 +20,16 @@ namespace JCT_SFML
 		const std::string &Player::name() const
 		{
 			return d->name;
+		}
+
+		unsigned int Player::score() const
+		{
+			return d->score;
+		}
+
+		void Player::setScore(unsigned int score)
+		{
+			d->score = score;
 		}
 	}
 }

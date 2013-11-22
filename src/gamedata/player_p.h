@@ -11,6 +11,7 @@ namespace JCT_SFML
 		{
 		public:
 			std::string name;
+			unsigned int score;
 		};
 	}
 }

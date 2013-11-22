@@ -16,6 +16,9 @@ namespace JCT_SFML
 			~Player();
 
 			const std::string &name() const;
+
+			unsigned int score() const;
+			void setScore(unsigned int score);
 		};
 	}
 }
