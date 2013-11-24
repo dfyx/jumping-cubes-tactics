@@ -7,11 +7,13 @@ namespace JCT_SFML
 {
 	namespace Gamedata
 	{
+		class Player;
 		class Node;
 
 		class GamePrivate
 		{
 		public:
+			std::vector<Player*> players;
 			std::vector<Node*> nodes;
 		};
 	}
