@@ -19,6 +19,8 @@ namespace JCT_SFML
 
 			unsigned int score() const;
 			void setScore(unsigned int score);
+
+			bool hasWon() const;
 		};
 	}
 }

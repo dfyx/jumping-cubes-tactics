@@ -31,5 +31,10 @@ namespace JCT_SFML
 		{
 			d->score = score;
 		}
+
+		bool Player::hasWon() const
+		{
+			return true;
+		}
 	}
 }
