@@ -36,7 +36,7 @@ namespace JCT_SFML
 
 		bool Player::hasWon() const
 		{
-			return true;
+			return score() >= d->game->nodeCount();
 		}
 	}
 }
