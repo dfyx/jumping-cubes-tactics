@@ -7,12 +7,14 @@ namespace JCT_SFML
 {
 	namespace Gamedata
 	{
+		class Game;
+
 		class Player
 		{
 		private:
 			class PlayerPrivate* d;
 		public:
-			Player(const std::string &name);
+			Player(Game *game, const std::string &name);
 			~Player();
 
 			const std::string &name() const;

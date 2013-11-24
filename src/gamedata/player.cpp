@@ -1,13 +1,15 @@
 #include "player.h"
 #include "player_p.h"
+#include "game.h"
 
 namespace JCT_SFML
 {
 	namespace Gamedata
 	{
-		Player::Player(const std::string &name)
+		Player::Player(Game *game, const std::string &name)
 		{
 			d = new PlayerPrivate();
+			d->game = game;
 			d->name = name;
 			d->score = 0;
 		}

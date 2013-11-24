@@ -7,9 +7,12 @@ namespace JCT_SFML
 {
 	namespace Gamedata
 	{
+		class Game;
+
 		class PlayerPrivate
 		{
 		public:
+			Game *game;
 			std::string name;
 			unsigned int score;
 		};
