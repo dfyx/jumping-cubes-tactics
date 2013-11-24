@@ -55,7 +55,7 @@ namespace JCT_SFML
 					{
 						currentNode->setValue(currentNode->value() - currentNode->edgeCount());
 						std::list<Gamedata::Node*> neighbors = currentNode->neighbors();
-						
+
 						// Add neighbors to queue
 						std::list<Gamedata::Node*>::iterator iter;
 						for(iter = neighbors.begin(); iter != neighbors.end(); ++iter)
