@@ -37,7 +37,7 @@ namespace JCT_SFML
 		{
 			std::list<Edge*>::iterator iter;
 			std::list<Node*> result;
-			for(iter = d->edges.begin(); iter != d->edges.end(); iter++)
+			for(iter = d->edges.begin(); iter != d->edges.end(); ++iter)
 			{
 				result.push_back((*iter)->targetNode());
 			}

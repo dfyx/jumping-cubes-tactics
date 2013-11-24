@@ -58,7 +58,7 @@ namespace JCT_SFML
 						
 						// Add neighbors to queue
 						std::list<Gamedata::Node*>::iterator iter;
-						for(iter = neighbors.begin(); iter != neighbors.end(); iter++)
+						for(iter = neighbors.begin(); iter != neighbors.end(); ++iter)
 						{
 							nodesToIncrease.push(*iter);
 						}
