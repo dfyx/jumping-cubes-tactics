@@ -19,6 +19,11 @@ namespace JCT_SFML
 			delete d;
 		}
 
+		void Turncontroller::startTurn(Gamedata::Player* currentPlayer)
+		{
+			d->currentPlayer = currentPlayer;
+		}
+
 		bool Turncontroller::increaseNode(Gamedata::Node* node)
 		{
 			std::queue<Gamedata::Node*> nodesToIncrease;

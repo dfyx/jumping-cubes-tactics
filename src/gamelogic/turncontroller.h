@@ -6,6 +6,7 @@ namespace JCT_SFML
 	namespace Gamedata
 	{
 		class Node;
+		class Player;
 	}
 
 	namespace Gamelogic
@@ -19,6 +20,7 @@ namespace JCT_SFML
 			Turncontroller();
 			~Turncontroller();
 
+			void startTurn(Gamedata::Player* currentPlayer);
 			bool increaseNode(Gamedata::Node* node);
 		};
 	}
