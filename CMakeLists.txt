@@ -29,6 +29,7 @@ add_executable(${EXECUTABLE_NAME}
 	"${PROJECT_SOURCE_DIR}/gamedata/edge.cpp"
 	"${PROJECT_SOURCE_DIR}/gamedata/game.cpp"
 	"${PROJECT_SOURCE_DIR}/gamedata/player.cpp"
+	"${PROJECT_SOURCE_DIR}/gamelogic/turncontroller.cpp"
 )
 
 
