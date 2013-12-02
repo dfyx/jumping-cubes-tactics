@@ -31,6 +31,7 @@ add_executable(${EXECUTABLE_NAME}
 	"${PROJECT_SOURCE_DIR}/gamedata/player.cpp"
 	"${PROJECT_SOURCE_DIR}/gamelogic/turncontroller.cpp"
 	"${PROJECT_SOURCE_DIR}/graphics/node_sprite.cpp"
+	"${PROJECT_SOURCE_DIR}/graphics/edge_sprite.cpp"
 )
 
 
