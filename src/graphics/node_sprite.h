@@ -1,7 +1,7 @@
 #ifndef JCT_SFML_GRAPHICS_NODE_SPRITE_H
 #define JCT_SFML_GRAPHICS_NODE_SPRITE_H
 
-#include <SFML/Graphics.hpp>
+#include "game_object.h"
 
 namespace JCT_SFML
 {
@@ -12,7 +12,7 @@ namespace JCT_SFML
 
 	namespace Graphics
 	{
-		class NodeSprite : public sf::Drawable
+		class NodeSprite : public GameObject
 		{
 		private:
 			class NodeSpritePrivate *d;
