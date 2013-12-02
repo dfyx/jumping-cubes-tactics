@@ -18,7 +18,7 @@ namespace JCT_SFML
 			class NodeSpritePrivate *d;
 
 		public:
-			NodeSprite(Gamedata::Node *node);
+			NodeSprite(const sf::RenderWindow &window, Gamedata::Node *node);
 			~NodeSprite();
 
 			void setPosition(const sf::Vector2f &position);

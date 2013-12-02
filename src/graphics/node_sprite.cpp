@@ -10,7 +10,8 @@ namespace JCT_SFML
 	{
 		const float NODE_SPRITE_RADIUS = 20;
 
-		NodeSprite::NodeSprite(Gamedata::Node *node)
+		NodeSprite::NodeSprite(const sf::RenderWindow &window, Gamedata::Node *node)
+			: GameObject(window)
 		{
 			d = new NodeSpritePrivate();
 
@@ -45,7 +46,7 @@ namespace JCT_SFML
 			// TODO: Do this depending on the node's owner
 			sf::Color playerColor = sf::Color::Red;
 
-			sf::Vector2i mousePosition = sf::Mouse::getPosition((const sf::RenderWindow&) target);
+			sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
 			sf::Vector2f ownPosition = d->circle.getPosition();
 			sf::Vector2f diff = sf::Vector2f(mousePosition.x - ownPosition.x,
 											 mousePosition.y - ownPosition.y);
