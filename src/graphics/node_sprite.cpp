@@ -35,6 +35,11 @@ namespace JCT_SFML
 			delete d;
 		}
 
+		const sf::Vector2f &NodeSprite::position() const
+		{
+			return d->circle.getPosition();
+		}
+
 		void NodeSprite::setPosition(const sf::Vector2f &position)
 		{
 			d->circle.setPosition(position);

@@ -21,6 +21,7 @@ namespace JCT_SFML
 			NodeSprite(const sf::RenderWindow &window, Gamedata::Node *node);
 			~NodeSprite();
 
+			const sf::Vector2f &position() const;
 			void setPosition(const sf::Vector2f &position);
 
 		protected:
