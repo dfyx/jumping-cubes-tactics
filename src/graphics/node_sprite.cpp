@@ -49,7 +49,7 @@ namespace JCT_SFML
 		void NodeSprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		{
 			// TODO: Do this depending on the node's owner
-			sf::Color playerColor = sf::Color::Red;
+			sf::Color playerColor = sf::Color(0xCC, 0xCC, 0xCC);
 
 			sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
 			sf::Vector2f ownPosition = d->circle.getPosition();
