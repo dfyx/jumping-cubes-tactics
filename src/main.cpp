@@ -16,6 +16,7 @@ int main()
     // Request a 32-bits depth buffer when creating the window
     sf::ContextSettings contextSettings;
     contextSettings.depthBits = 32;
+    contextSettings.antialiasingLevel = 8;
 
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "JCT-SFML", sf::Style::Default, contextSettings);
