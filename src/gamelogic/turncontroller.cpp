@@ -51,16 +51,19 @@ namespace JCT_SFML
 
 					// Update value
 					currentNode->setValue(currentNode->value() + 1);
-					while(currentNode->value() > currentNode->edgeCount())
+					if(currentNode->edgeCount() != 0)
 					{
-						currentNode->setValue(currentNode->value() - currentNode->edgeCount());
-						std::list<Gamedata::Node*> neighbors = currentNode->neighbors();
-
-						// Add neighbors to queue
-						std::list<Gamedata::Node*>::iterator iter;
-						for(iter = neighbors.begin(); iter != neighbors.end(); ++iter)
+						while(currentNode->value() > currentNode->edgeCount())
 						{
-							nodesToIncrease.push(*iter);
+							currentNode->setValue(currentNode->value() - currentNode->edgeCount());
+							std::list<Gamedata::Node*> neighbors = currentNode->neighbors();
+
+							// Add neighbors to queue
+							std::list<Gamedata::Node*>::iterator iter;
+							for(iter = neighbors.begin(); iter != neighbors.end(); ++iter)
+							{
+								nodesToIncrease.push(*iter);
+							}
 						}
 					}
 				}
