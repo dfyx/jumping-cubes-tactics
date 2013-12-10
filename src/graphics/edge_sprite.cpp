@@ -22,8 +22,8 @@ namespace JCT_SFML
 		void EdgeSprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		{
 		    sf::VertexArray vertexArray(sf::Lines, 2);
-		    vertexArray[0] = sf::Vertex(d->from->position(), sf::Color(0xCC, 0xCC, 0xCC));
-		    vertexArray[1] = sf::Vertex(d->to->position(), sf::Color(0xCC, 0xCC, 0xCC));
+		    vertexArray[0] = sf::Vertex(d->from->position(), d->from->color());
+		    vertexArray[1] = sf::Vertex(d->to->position(), d->to->color());
 
 		    target.draw(vertexArray);
 		}
