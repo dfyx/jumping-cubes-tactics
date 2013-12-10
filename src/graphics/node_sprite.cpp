@@ -1,6 +1,7 @@
 #include "node_sprite.h"
 #include "node_sprite_p.h"
 #include "../gamedata/node.h"
+#include "../gamedata/player.h"
 #include <cmath>
 #include <sstream>
 
@@ -46,10 +47,23 @@ namespace JCT_SFML
 			d->text.setPosition(position);
 		}
 
+		sf::Color NodeSprite::color() const
+		{
+			Gamedata::Player *owner = d->node->owner();
+			if(owner == NULL)
+			{
+				return sf::Color(0xCC, 0xCC, 0xCC);
+			}
+			else
+			{
+				return sf::Color(owner->red(), owner->green(), owner->blue());
+			}
+		}
+
 		void NodeSprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		{
 			// TODO: Do this depending on the node's owner
-			sf::Color playerColor = sf::Color(0xCC, 0xCC, 0xCC);
+			sf::Color playerColor = color();
 
 			sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
 			sf::Vector2f ownPosition = d->circle.getPosition();

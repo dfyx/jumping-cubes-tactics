@@ -24,6 +24,8 @@ namespace JCT_SFML
 			const sf::Vector2f &position() const;
 			void setPosition(const sf::Vector2f &position);
 
+			sf::Color color() const;
+
 		protected:
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 		};
