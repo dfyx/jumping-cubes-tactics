@@ -19,6 +19,7 @@ namespace JCT_SFML
 
 			void addPlayer(const std::string &name);
 
+			Node *node(unsigned int id) const;
 			void addNode(Node *node);
 
 			unsigned int nodeCount() const;
