@@ -23,6 +23,12 @@ namespace JCT_SFML
 			d->players.push_back(player);
 		}
 
+		void Game::addNode(Node *node)
+		{
+			node->setId(nodeCount());
+			d->nodes.push_back(node);
+		}
+
 		unsigned int Game::nodeCount() const
 		{
 			return d->nodes.size();
