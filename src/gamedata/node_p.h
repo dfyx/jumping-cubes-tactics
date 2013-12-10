@@ -16,6 +16,7 @@ namespace JCT_SFML
 			std::list<Edge*> edges;
 			unsigned int value;
 			Player *owner;
+			unsigned int id;
 		};
 	}
 }

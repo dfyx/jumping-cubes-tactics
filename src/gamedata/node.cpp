@@ -18,6 +18,16 @@ namespace JCT_SFML
 			delete d;
 		}
 
+		unsigned int Node::id() const
+		{
+			return d->id;
+		}
+
+		void Node::setId(unsigned int id)
+		{
+			d->id = id;
+		}
+
 		void Node::addEdge(Node* targetNode)
 		{
 			addEdge(new Edge(this, targetNode));

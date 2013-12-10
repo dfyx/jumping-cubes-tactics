@@ -19,6 +19,9 @@ namespace JCT_SFML
 			Node(unsigned int value = 1);
 			~Node();
 
+			unsigned int id() const;
+			void setId(unsigned int id);
+
 			void addEdge(Node *targetNode);
 			void addEdge(Edge *edge);
 
