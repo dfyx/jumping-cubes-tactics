@@ -15,6 +15,7 @@ namespace JCT_SFML
 			Game *game;
 			std::string name;
 			unsigned int score;
+			unsigned char red, green, blue;
 		};
 	}
 }

@@ -23,6 +23,11 @@ namespace JCT_SFML
 			void setScore(unsigned int score);
 
 			bool hasWon() const;
+
+			unsigned char red() const;
+			unsigned char green() const;
+			unsigned char blue() const;
+			void setColor(unsigned char red, unsigned char green, unsigned char blue);
 		};
 	}
 }

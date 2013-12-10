@@ -12,6 +12,10 @@ namespace JCT_SFML
 			d->game = game;
 			d->name = name;
 			d->score = 0;
+
+			d->red = 255;
+			d->green = 0;
+			d->blue = 0;
 		}
 
 		Player::~Player()
@@ -37,6 +41,28 @@ namespace JCT_SFML
 		bool Player::hasWon() const
 		{
 			return score() >= d->game->nodeCount();
+		}
+
+		unsigned char Player::red() const
+		{
+			return d->red;
+		}
+
+		unsigned char Player::green() const
+		{
+			return d->green;
+		}
+
+		unsigned char Player::blue() const
+		{
+			return d->blue;
+		}
+
+		void Player::setColor(unsigned char red, unsigned char green, unsigned char blue)
+		{
+			d->red = red;
+			d->green = green;
+			d->blue = blue;
 		}
 	}
 }
