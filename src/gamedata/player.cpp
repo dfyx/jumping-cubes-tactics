@@ -43,6 +43,11 @@ namespace JCT_SFML
 			return score() >= d->game->nodeCount();
 		}
 
+		bool Player::hasLost() const
+		{
+			return (score() == 0 && d->game->neutralPlayer()->score() == 0);
+		}
+
 		unsigned char Player::red() const
 		{
 			return d->red;
