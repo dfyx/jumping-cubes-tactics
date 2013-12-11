@@ -40,6 +40,7 @@ namespace JCT_SFML
 		{
 			node->setId(nodeCount());
 			node->setOwner(d->neutralPlayer);
+			d->neutralPlayer->setScore(d->neutralPlayer->score() + 1);
 			d->nodes.push_back(node);
 		}
 
