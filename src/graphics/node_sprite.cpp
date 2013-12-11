@@ -50,14 +50,7 @@ namespace JCT_SFML
 		sf::Color NodeSprite::color() const
 		{
 			Gamedata::Player *owner = d->node->owner();
-			if(owner == NULL)
-			{
-				return sf::Color(0xCC, 0xCC, 0xCC);
-			}
-			else
-			{
-				return sf::Color(owner->red(), owner->green(), owner->blue());
-			}
+			return sf::Color(owner->red(), owner->green(), owner->blue());
 		}
 
 		void NodeSprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
