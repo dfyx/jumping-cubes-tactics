@@ -7,6 +7,7 @@ namespace JCT_SFML
 	{
 		class Node;
 		class Player;
+		class Game;
 	}
 
 	namespace Gamelogic
@@ -17,7 +18,7 @@ namespace JCT_SFML
 		private:
 			class TurncontrollerPrivate* d;
 		public:
-			Turncontroller();
+			Turncontroller(Gamedata::Game *game);
 			~Turncontroller();
 
 			void startTurn(Gamedata::Player* currentPlayer);

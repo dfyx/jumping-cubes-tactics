@@ -10,11 +10,19 @@ namespace JCT_SFML
 		Game::Game()
 		{
 			d = new GamePrivate();
+			d->neutralPlayer = new Player(this, "Neutral");
+			d->neutralPlayer->setColor(0xCC, 0xCC, 0xCC);
 		}
 
 		Game::~Game()
 		{
+			delete d->neutralPlayer;
 			delete d;
+		}
+
+		const Player *Game::neutralPlayer() const
+		{
+			return d->neutralPlayer;
 		}
 
 		void Game::addPlayer(const std::string &name)
@@ -31,6 +39,7 @@ namespace JCT_SFML
 		void Game::addNode(Node *node)
 		{
 			node->setId(nodeCount());
+			node->setOwner(d->neutralPlayer);
 			d->nodes.push_back(node);
 		}
 

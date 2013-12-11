@@ -2,6 +2,7 @@
 #include "turncontroller_p.h"
 #include "../gamedata/node.h"
 #include "../gamedata/player.h"
+#include "../gamedata/game.h"
 #include <queue>
 #include <list>
 
@@ -9,9 +10,10 @@ namespace JCT_SFML
 {
 	namespace Gamelogic
 	{
-		Turncontroller::Turncontroller()
+		Turncontroller::Turncontroller(Gamedata::Game *game)
 		{
 			d = new TurncontrollerPrivate();
+			d->game = game;
 		}
 
 		Turncontroller::~Turncontroller()
@@ -28,7 +30,7 @@ namespace JCT_SFML
 		{
 			std::queue<Gamedata::Node*> nodesToIncrease;
 			Gamedata::Player* currentOwner = node->owner();
-			if(currentOwner == NULL || currentOwner == d->currentPlayer)
+			if(currentOwner == d->game->neutralPlayer() || currentOwner == d->currentPlayer)
 			{
 				nodesToIncrease.push(node);
 				while(!d->currentPlayer->hasWon()

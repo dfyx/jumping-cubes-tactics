@@ -13,6 +13,7 @@ namespace JCT_SFML
 		class GamePrivate
 		{
 		public:
+			Player *neutralPlayer;
 			std::vector<Player*> players;
 			std::vector<Node*> nodes;
 		};

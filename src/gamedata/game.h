@@ -8,6 +8,7 @@ namespace JCT_SFML
 	namespace Gamedata
 	{
 		class Node;
+		class Player;
 
 		class Game
 		{
@@ -17,6 +18,7 @@ namespace JCT_SFML
 			Game();
 			~Game();
 
+			const Player *neutralPlayer() const;
 			void addPlayer(const std::string &name);
 
 			Node *node(unsigned int id) const;

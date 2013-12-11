@@ -14,6 +14,7 @@ namespace JCT_SFML
 		{
 		public:
 			Gamedata::Player *currentPlayer;
+			Gamedata::Game *game;
 		};
 	}
 }
