@@ -53,20 +53,24 @@ namespace JCT_SFML
 			return sf::Color(owner->red(), owner->green(), owner->blue());
 		}
 
+		bool NodeSprite::collides(const sf::Vector2f &position) const
+		{
+			sf::Vector2f ownPosition = d->circle.getPosition();
+			sf::Vector2f diff = position - ownPosition;
+			float dist = sqrt(diff.x * diff.x + diff.y * diff.y);
+			return dist <= NODE_SPRITE_RADIUS;
+		}
+
 		void NodeSprite::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		{
 			// TODO: Do this depending on the node's owner
 			sf::Color playerColor = color();
 
 			sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-			sf::Vector2f ownPosition = d->circle.getPosition();
-			sf::Vector2f diff = sf::Vector2f(mousePosition.x - ownPosition.x,
-											 mousePosition.y - ownPosition.y);
-			float dist = sqrt(diff.x * diff.x + diff.y * diff.y);
 
 			// Set colors
 			d->circle.setOutlineColor(playerColor);
-			if(dist <= NODE_SPRITE_RADIUS)
+			if(this->collides(sf::Vector2f(mousePosition.x, mousePosition.y)))
 			{
 				d->circle.setFillColor(playerColor);
 				d->text.setColor(sf::Color::Black);

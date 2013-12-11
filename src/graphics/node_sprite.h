@@ -26,6 +26,8 @@ namespace JCT_SFML
 
 			sf::Color color() const;
 
+			virtual bool collides(const sf::Vector2f &position) const;
+
 		protected:
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 		};

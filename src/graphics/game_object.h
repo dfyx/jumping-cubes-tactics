@@ -14,6 +14,8 @@ namespace JCT_SFML
 		public:
 			GameObject(const sf::RenderWindow &window) : window(window) {}
 			virtual void update() {};
+
+			virtual bool collides(const sf::Vector2f position) const {return false;}
 		};
 	}
 }
