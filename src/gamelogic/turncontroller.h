@@ -23,6 +23,7 @@ namespace JCT_SFML
 
 			void startTurn(Gamedata::Player* currentPlayer);
 			bool increaseNode(Gamedata::Node* node);
+			bool canIncreaseNode(Gamedata::Node* node);
 		};
 	}
 }

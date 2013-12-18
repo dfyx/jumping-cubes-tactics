@@ -30,7 +30,7 @@ namespace JCT_SFML
 		{
 			std::queue<Gamedata::Node*> nodesToIncrease;
 			Gamedata::Player* currentOwner = node->owner();
-			if(currentOwner == d->game->neutralPlayer() || currentOwner == d->currentPlayer)
+			if(canIncreaseNode(node))
 			{
 				nodesToIncrease.push(node);
 				while(!d->currentPlayer->hasWon()
@@ -76,6 +76,12 @@ namespace JCT_SFML
 			{
 				return false;
 			}
+		}
+
+		bool Turncontroller::canIncreaseNode(Gamedata::Node *node)
+		{
+			Gamedata::Player* currentOwner = node->owner();
+			return currentOwner == d->game->neutralPlayer() || currentOwner == d->currentPlayer;
 		}
 	}
 }
