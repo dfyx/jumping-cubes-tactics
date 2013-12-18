@@ -19,6 +19,7 @@ namespace JCT_SFML
 			sf::CircleShape circle;
 			sf::Text text;
 			sf::Font font;
+			bool highlighted;
 		};
 	}
 }

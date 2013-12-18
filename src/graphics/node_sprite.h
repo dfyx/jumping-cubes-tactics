@@ -28,6 +28,9 @@ namespace JCT_SFML
 
 			Gamedata::Node *node() const;
 
+			void setHighlighted(bool highlighted);
+			bool highlighted() const;
+
 			virtual bool collides(const sf::Vector2f &position) const;
 
 		protected:

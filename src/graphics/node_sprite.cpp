@@ -28,6 +28,8 @@ namespace JCT_SFML
 			d->text.setCharacterSize(NODE_SPRITE_RADIUS);
 			d->text.setFont(d->font);
 
+			d->highlighted = false;
+
 			setPosition(sf::Vector2f(0, 0));
 		}
 
@@ -58,6 +60,16 @@ namespace JCT_SFML
 			return d->node;
 		}
 
+		void NodeSprite::setHighlighted(bool highlighted)
+		{
+			d->highlighted = highlighted;
+		}
+
+		bool NodeSprite::highlighted() const
+		{
+			return d->highlighted;
+		}
+
 		bool NodeSprite::collides(const sf::Vector2f &position) const
 		{
 			sf::Vector2f ownPosition = d->circle.getPosition();
@@ -75,7 +87,7 @@ namespace JCT_SFML
 
 			// Set colors
 			d->circle.setOutlineColor(playerColor);
-			if(this->collides(sf::Vector2f(mousePosition.x, mousePosition.y)))
+			if(highlighted())
 			{
 				d->circle.setFillColor(playerColor);
 				d->text.setColor(sf::Color::Black);
