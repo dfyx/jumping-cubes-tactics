@@ -53,6 +53,11 @@ namespace JCT_SFML
 			return sf::Color(owner->red(), owner->green(), owner->blue());
 		}
 
+		Gamedata::Node *NodeSprite::node() const
+		{
+			return d->node;
+		}
+
 		bool NodeSprite::collides(const sf::Vector2f &position) const
 		{
 			sf::Vector2f ownPosition = d->circle.getPosition();

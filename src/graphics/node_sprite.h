@@ -26,6 +26,8 @@ namespace JCT_SFML
 
 			sf::Color color() const;
 
+			Gamedata::Node *node() const;
+
 			virtual bool collides(const sf::Vector2f &position) const;
 
 		protected:
