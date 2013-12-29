@@ -15,7 +15,7 @@ namespace JCT_SFML
 			class EdgeSpritePrivate *d;
 
 		public:
-			EdgeSprite(const sf::RenderWindow &window, NodeSprite *from, NodeSprite *to);
+			EdgeSprite(NodeSprite *from, NodeSprite *to);
 			~EdgeSprite();
 
 		protected:

@@ -6,8 +6,7 @@ namespace JCT_SFML
 {
 	namespace Graphics
 	{
-		EdgeSprite::EdgeSprite(const sf::RenderWindow &window, NodeSprite *from, NodeSprite *to)
-			: GameObject(window)
+		EdgeSprite::EdgeSprite(NodeSprite *from, NodeSprite *to)
 		{
 			d = new EdgeSpritePrivate();
 			d->from = from;

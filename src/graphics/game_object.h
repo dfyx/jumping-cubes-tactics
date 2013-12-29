@@ -9,10 +9,7 @@ namespace JCT_SFML
 	{
 		class GameObject : public sf::Drawable
 		{
-		protected:
-			const sf::RenderWindow &window;
 		public:
-			GameObject(const sf::RenderWindow &window) : window(window) {}
 			virtual void update() {};
 
 			virtual bool collides(const sf::Vector2f position) const {return false;}
