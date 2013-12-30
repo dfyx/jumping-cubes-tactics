@@ -32,7 +32,16 @@ namespace JCT_SFML
 
 		void Game::addPlayer(const std::string &name)
 		{
+			addPlayer(name, 0xFF, 0x00, 0x00);
+		}
+
+		void Game::addPlayer(const std::string &name,
+							 unsigned char red,
+							 unsigned char green,
+							 unsigned char blue)
+		{
 			Player *player = new Player(this, name);
+			player->setColor(red, green, blue);
 			d->players.push_back(player);
 		}
 

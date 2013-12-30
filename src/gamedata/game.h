@@ -21,6 +21,10 @@ namespace JCT_SFML
 			const Player *neutralPlayer() const;
 			Player *player(unsigned int id) const;
 			void addPlayer(const std::string &name);
+			void addPlayer(const std::string &name,
+						   unsigned char red,
+						   unsigned char green,
+						   unsigned char blue);
 			unsigned int playerCount() const;
 
 			Node *node(unsigned int id) const;
