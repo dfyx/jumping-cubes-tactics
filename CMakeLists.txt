@@ -47,6 +47,14 @@ if(SFML_FOUND)
   target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
 endif()
 
+# Copy maps
+add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
+    COMMAND mkdir -p ${PROJECT_BINARY_DIR}/data
+)
+add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
+    COMMAND cp ${PROJECT_ROOT_DIR}/data/*.jct ${PROJECT_BINARY_DIR}/data
+)
+
 # Install target
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
 

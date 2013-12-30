@@ -1,0 +1,208 @@
+42
+80 75		# Alaska
+180 75		# Northwest Territories
+450 40		# Greenland
+150 120		# Alberta
+235 125		# Ontario
+330 120		# Eastern Canada
+125 175		# Western US
+220 200		# Eastern US
+140 260		# Mexico
+270 335		# Venezuela
+280 435		# Peru
+345 420		# Brasil
+300 520		# Argentina
+500 75		# Iceland
+625 75		# Scandinavia
+545 120		# Great Britain
+605 130		# Northern Europe
+700 110		# Russia
+530 190		# Western Europe
+615 190		# Southern Europe
+545 280		# North Africa
+640 240		# Egypt
+640 365		# Central Africa
+720 330		# East Africa
+650 455		# South Africa
+745 450		# Madagascar
+795 95		# Ural
+865 75		# Sibiria
+960 65		# Yakutsk
+1170 75		# Kamchatka
+1000 110	# Irkutsk
+800 160		# Afghanistan
+965 160		# Mongolia
+950 215		# China
+1100 195	# Japan
+725 210		# Middle East
+870 255		# India
+975 290		# Southeast Asia
+1025 365	# Indonesia
+1135 390	# New Guinea
+1045 490	# Western Australia
+1140 485	# Eastern Australia
+164
+0 1 1		# Alaska
+0 3 1
+1 0 0		# Northwest Territories
+1 2 1
+1 3 1
+1 4 1
+2 1 0		# Greenland
+2 4 1
+2 5 1
+2 13 1
+3 0 0		# Alberta
+3 1 0
+3 4 1
+3 6 1
+4 1 0		# Ontario
+4 2 0
+4 3 0
+4 5 1
+4 6 1
+4 7 1
+5 2 0		# Eastern Canada
+5 4 0
+5 7 1
+6 3 0		# Western US
+6 4 0
+6 7 1
+6 8 1
+7 4 0		# Eastern US
+7 5 0
+7 6 0
+7 8 1
+8 6 0		# Mexico
+8 7 0
+8 9 1
+9 8 0		# Venezuela
+9 10 1
+9 11 1
+10 9 0		# Peru
+10 11 1
+10 12 1
+11 9 0		# Brasil
+11 10 0
+11 12 1
+11 20 1
+12 10 0		# Argentina
+12 11 0
+13 2 0		# Iceland
+13 14 1
+13 15 1
+14 13 0		# Scandinavia
+14 15 1
+14 16 1
+14 17 1
+15 13 0		# Great Britain
+15 14 0
+15 16 1
+15 18 1
+16 14 0		# Northern Europe
+16 15 0
+16 17 1
+16 18 1
+16 19 1
+17 14 0		# Russia
+17 16 0
+17 19 1
+17 26 1
+17 31 1
+17 35 1
+18 15 0		# Western Europe
+18 16 0
+18 19 1
+18 20 1
+19 16 0		# Southern Europe
+19 17 0
+19 18 0
+19 20 1
+19 21 1
+19 35 1
+20 18 0		# North Africa
+20 19 0
+20 21 1
+20 22 1
+20 23 1
+20 11 1
+21 20 0		# Egypt
+21 19 0
+21 23 1
+21 35 1
+22 20 0		# Central Africa
+22 23 1
+22 24 1
+23 20 0		# East Africa
+23 21 0
+23 22 0
+23 24 1
+23 25 1
+23 35 1
+24 22 0		# South Africa
+24 23 0
+24 25 1
+25 23 0		# Madagascar
+25 24 0
+26 17 0
+26 27 1		# Ural
+26 31 1
+26 33 1
+27 26 0		# Sibiria
+27 28 1
+27 30 1
+27 32 1
+27 33 1
+28 27 0		# Yakutsk
+28 29 1
+28 30 1
+29 28 0		# Kamchatka
+29 30 1
+29 32 1
+29 34 1
+30 27 0		# Irkutsk
+30 28 0
+30 29 0
+30 32 1
+31 17 0		# Afghanistan
+31 26 0
+31 33 1
+31 35 1
+31 36 1
+32 27 0		# Mongolia
+32 29 0
+32 30 0
+32 33 1
+32 34 1
+33 26 0		# China
+33 27 0
+33 31 0
+33 32 0
+33 36 1
+33 37 1
+34 29 0		# Japan
+34 32 0
+35 17 0		# Middle East
+35 19 0
+35 21 0
+35 23 0
+35 31 0
+35 36 1
+36 31 0		# India
+36 33 0
+36 35 0
+36 37 1
+37 33 0		# Southeast Asia
+37 36 0
+37 38 1
+38 37 0		# Indonesia
+38 39 1
+38 40 1
+39 38 0		# New Guinea
+39 40 1
+39 41 1
+40 38 0		# Western Australia
+40 39 0
+40 41 1
+41 39 0		# Eastern Australia
+41 40 0
