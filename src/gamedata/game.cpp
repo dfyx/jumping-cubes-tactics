@@ -25,10 +25,20 @@ namespace JCT_SFML
 			return d->neutralPlayer;
 		}
 
+		Player *Game::player(unsigned int id) const
+		{
+			return d->players[id];
+		}
+
 		void Game::addPlayer(const std::string &name)
 		{
 			Player *player = new Player(this, name);
 			d->players.push_back(player);
+		}
+
+		unsigned int Game::playerCount() const
+		{
+			return d->players.size();
 		}
 
 		Node *Game::node(unsigned int id) const
