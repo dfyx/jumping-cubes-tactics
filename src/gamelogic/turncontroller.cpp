@@ -14,6 +14,7 @@ namespace JCT_SFML
 		{
 			d = new TurncontrollerPrivate();
 			d->game = game;
+			d->currentPlayer = game->player(0);
 		}
 
 		Turncontroller::~Turncontroller()
@@ -21,9 +22,15 @@ namespace JCT_SFML
 			delete d;
 		}
 
-		void Turncontroller::startTurn(Gamedata::Player* currentPlayer)
+		void Turncontroller::startNextTurn()
 		{
-			d->currentPlayer = currentPlayer;
+			do
+			{
+				d->currentPlayerId++;
+				d->currentPlayerId %= d->game->playerCount();
+				d->currentPlayer = d->game->player(d->currentPlayerId);
+			}
+			while(d->currentPlayer->hasLost());
 		}
 
 		bool Turncontroller::increaseNode(Gamedata::Node* node)
