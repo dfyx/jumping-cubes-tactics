@@ -49,10 +49,10 @@ endif()
 
 # Copy maps
 add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
-    COMMAND mkdir -p ${PROJECT_BINARY_DIR}/data
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${PROJECT_BINARY_DIR}/data
 )
 add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
-    COMMAND cp ${PROJECT_ROOT_DIR}/data/*.jct ${PROJECT_BINARY_DIR}/data
+    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_ROOT_DIR}/data/*.jct ${PROJECT_BINARY_DIR}/data
 )
 
 # Install target
