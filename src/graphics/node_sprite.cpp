@@ -22,7 +22,7 @@ namespace JCT_SFML
 			d->circle.setOutlineThickness(2);
 			d->circle.setOrigin(NODE_SPRITE_RADIUS, NODE_SPRITE_RADIUS);
 
-			d->font.loadFromFile("/Library/Fonts/Arial.ttf");
+			d->font.loadFromFile("data/Arial.ttf");
 
 			d->text.setCharacterSize(NODE_SPRITE_RADIUS);
 			d->text.setFont(d->font);
