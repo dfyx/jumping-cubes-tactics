@@ -124,6 +124,29 @@ int main()
             }
         }
 
+        // Draw victory overlay
+        if(controller.currentPlayer()->hasWon())
+        {
+            Gamedata::Player *winner = controller.currentPlayer();
+
+            // Dim window contents
+            sf::RectangleShape rect(sf::Vector2f(window.getSize().x, window.getSize().y));
+            rect.setFillColor(sf::Color(0, 0, 0, 128));
+            window.draw(rect);
+
+            // Prepare text
+            sf::Font font;
+            font.loadFromFile("data/Arial.ttf");
+            sf::Text text(winner->name() + " wins!", font);
+            text.setColor(sf::Color(winner->red(), winner->green(), winner->blue()));
+
+            // Center text
+            sf::FloatRect localBounds = text.getLocalBounds();
+            text.setOrigin(localBounds.width / 2, localBounds.height * 0.8);
+            text.setPosition(sf::Vector2f(window.getSize().x / 2, window.getSize().y / 2));
+            window.draw(text);
+        }
+
         if(hasFocus)
         {
             cursor.setPlayer(controller.currentPlayer());
