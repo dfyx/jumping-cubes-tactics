@@ -49,6 +49,8 @@ int main()
 
     Graphics::NodeSprite *highlightedNode = NULL;
 
+    bool hasFocus = true;
+
     // Start game loop
     while (window.isOpen())
     {
@@ -63,9 +65,16 @@ int main()
             // Escape key : exit
             if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
                 window.close();
+
+            if(event.type == sf::Event::LostFocus)
+                hasFocus = false;
+
+            if(event.type == sf::Event::GainedFocus)
+                hasFocus = true;
         }
 
         // Handle mouse input
+        if(hasFocus)
         {
             if(highlightedNode != NULL)
             {
