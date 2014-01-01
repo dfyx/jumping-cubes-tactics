@@ -22,6 +22,7 @@ namespace JCT_SFML
 			~Turncontroller();
 
 			void startNextTurn();
+			Gamedata::Player *currentPlayer() const;
 
 			bool increaseNode(Gamedata::Node* node);
 			bool canIncreaseNode(Gamedata::Node* node);

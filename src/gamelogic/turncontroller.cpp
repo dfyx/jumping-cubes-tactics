@@ -33,6 +33,11 @@ namespace JCT_SFML
 			while(d->currentPlayer->hasLost());
 		}
 
+		Gamedata::Player *Turncontroller::currentPlayer() const
+		{
+			return d->currentPlayer;
+		}
+
 		bool Turncontroller::increaseNode(Gamedata::Node* node)
 		{
 			std::queue<Gamedata::Node*> nodesToIncrease;

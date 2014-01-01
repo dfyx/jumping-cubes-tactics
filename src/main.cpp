@@ -9,6 +9,7 @@
 #include "gamelogic/turncontroller.h"
 #include "graphics/node_sprite.h"
 #include "graphics/edge_sprite.h"
+#include "graphics/cursor_sprite.h"
 
 #include "loaders/simple_game_loader.h"
 
@@ -50,6 +51,8 @@ int main()
     Graphics::NodeSprite *highlightedNode = NULL;
 
     bool hasFocus = true;
+    Graphics::CursorSprite cursor;
+    window.setMouseCursorVisible(false);
 
     // Start game loop
     while (window.isOpen())
@@ -84,6 +87,8 @@ int main()
 
             sf::Vector2i intMousePos = sf::Mouse::getPosition(window);
             sf::Vector2f mousePos(intMousePos.x, intMousePos.y);
+            cursor.setPosition(mousePos);
+
             std::vector<Graphics::NodeSprite*>::iterator nodeIter;
             for(nodeIter = nodeSprites.begin(); nodeIter != nodeSprites.end(); nodeIter++)
             {
@@ -117,6 +122,12 @@ int main()
             {
                 window.draw(**nodeIter);
             }
+        }
+
+        if(hasFocus)
+        {
+            cursor.setPlayer(controller.currentPlayer());
+            window.draw(cursor);
         }
 
         // Finally, display the rendered frame on screen
