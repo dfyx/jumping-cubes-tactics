@@ -93,7 +93,8 @@ namespace JCT_SFML
 		bool Turncontroller::canIncreaseNode(Gamedata::Node *node)
 		{
 			Gamedata::Player* currentOwner = node->owner();
-			return currentOwner == d->game->neutralPlayer() || currentOwner == d->currentPlayer;
+			return !d->currentPlayer->hasWon() &&
+				(currentOwner == d->game->neutralPlayer() || currentOwner == d->currentPlayer);
 		}
 	}
 }
