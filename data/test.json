@@ -1,0 +1,17 @@
+{
+	"nodes": [
+		{"x":  50, "y":  50},
+		{"x": 200, "y":  50},
+		{"x": 200, "y": 200},
+		{"x":  50, "y": 200},
+		{"x": 300, "y": 125}
+	],
+	"edges": [
+		{"from": 0, "to": 1, "bidirectional": true},
+		{"from": 1, "to": 2, "bidirectional": true},
+		{"from": 2, "to": 3, "bidirectional": true},
+		{"from": 3, "to": 0, "bidirectional": true},
+		{"from": 1, "to": 4, "bidirectional": true},
+		{"from": 2, "to": 4, "bidirectional": true}
+	]
+}

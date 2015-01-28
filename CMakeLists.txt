@@ -34,6 +34,7 @@ add_executable(${EXECUTABLE_NAME}
 	"${PROJECT_SOURCE_DIR}/graphics/edge_sprite.cpp"
 	"${PROJECT_SOURCE_DIR}/graphics/cursor_sprite.cpp"
 	"${PROJECT_SOURCE_DIR}/loaders/grid_game_loader.cpp"
+	"${PROJECT_SOURCE_DIR}/loaders/json_game_loader.cpp"
 	"${PROJECT_SOURCE_DIR}/loaders/simple_game_loader.cpp"
 )
 
@@ -47,6 +48,10 @@ if(SFML_FOUND)
   include_directories(${SFML_INCLUDE_DIR})
   target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
 endif()
+
+find_package(Jsoncpp REQUIRED)
+include_directories(${Jsoncpp_INCLUDE_DIR})
+target_link_libraries(${EXECUTABLE_NAME} ${Jsoncpp_LIBRARY})
 
 # Copy data
 add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
