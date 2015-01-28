@@ -11,7 +11,7 @@
 #include "graphics/edge_sprite.h"
 #include "graphics/cursor_sprite.h"
 
-#include "loaders/simple_game_loader.h"
+#include "loaders/json_game_loader.h"
 
 #include <iostream>
 
@@ -35,7 +35,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1280, 800), "JCT-SFML", sf::Style::Default, contextSettings);
     window.setVerticalSyncEnabled(true);
 
-    Loaders::SimpleGameLoader loader("data/risk.jct");
+    Loaders::JsonGameLoader loader("data/risk.json");
 
     std::vector<Graphics::NodeSprite*> nodeSprites = loader.nodeSprites();
     std::vector<Graphics::EdgeSprite*> edgeSprites = loader.edgeSprites();
