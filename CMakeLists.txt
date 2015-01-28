@@ -48,6 +48,10 @@ if(SFML_FOUND)
   target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
 endif()
 
+find_package(Jsoncpp REQUIRED)
+include_directories(${Jsoncpp_INCLUDE_DIR})
+target_link_libraries(${EXECUTABLE_NAME} ${Jsoncpp_LIBRARY})
+
 # Copy data
 add_custom_command(TARGET ${EXECUTABLE_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory ${PROJECT_BINARY_DIR}/data
